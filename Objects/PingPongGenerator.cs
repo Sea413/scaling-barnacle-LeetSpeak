@@ -19,7 +19,10 @@ namespace LeetSpeakGen
       if (array[i] == 'e') {
       userInput = userInput.Replace('e', '3');
       _instances.Add (userInput);
-      // userInput = string.Join("", array);
+      }
+      if (array[i] == 'o') {
+        userInput = userInput.Replace('o', '0');
+        _instances.Add (userInput);
       }
       // else
       // {
