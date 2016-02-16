@@ -9,19 +9,29 @@ namespace LeetSpeakGen
     private int _id;
     private static List<string> _instances = new List<string> {};
 
-  public LeetSpeak(string userinput)
+  public LeetSpeak(string userInput)
 
   {
-    _string = userinput;
-    char[] array = userinput.ToCharArray();
-    for (int i =1; i <= array.Length; i++)
+    _string = userInput;
+    char[] array = userInput.ToCharArray();
+    for (int i =0; i < array.Length; i++)
     {
       if (array[i] == 'e') {
-      userinput = userinput.Replace('e', '3');
-
+      userInput = userInput.Replace('e', '3');
+      _instances.Add (userInput);
+      // userInput = string.Join("", array);
       }
+      // else
+      // {
+      //   return _string;
+      // }
     }
   }
+
+  // public string LeetSpeakConverter(string input)
+  // {
+  //
+  // }
 
     public List<string> GetAll()
     {

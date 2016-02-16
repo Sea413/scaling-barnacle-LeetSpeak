@@ -16,7 +16,7 @@ namespace LeetSpeakGen
         List<string> test1 = supastring.GetAll();
 
         //Act
-        List<string> testList = new List<string>{"h","3", "l", "l", "o"};
+        List<string> testList = new List<string>{"h3llo"};
 
         //Assert
         Assert.Equal(testList, test1);
